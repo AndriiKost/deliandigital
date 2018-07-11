@@ -1,0 +1,4 @@
+a.text-dark:focus, a.text-dark:hover {
+  border: 1px solid #1d2124;
+  border-radius: 3px;
+}
