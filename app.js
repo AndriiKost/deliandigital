@@ -20,7 +20,8 @@ const app = express();
 
 const users = require('./routes/users');
 
-const port = 3000;
+// Port for heroku
+const port = proccess.env.PORT || 8080;
 
 // CORS Middleware
 app.use(cors());
@@ -43,6 +44,11 @@ app.use('/users', users);
 app.get('/', (req, res) => {
     res.send('Invalid Endpoint');
 });
+
+// Any other route redirect to the index page
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+})
 
 // Start Server
 app.listen(port, () => {
