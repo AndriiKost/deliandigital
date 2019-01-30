@@ -1,0 +1,35 @@
+.white-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 5em;
+  padding: 5em 7em;
+}
+.post-image img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+.post-header h1 {
+  font-weight: bolder;
+  padding-top: 10px;
+}
+.author-info {
+  display: flex;
+}
+.author-info img {
+  height: 60px;
+  border-radius: 50%;
+}
+.author-info p {
+  margin: 0;
+  padding: 0;
+}
+.name-and-date {
+  margin-left: 15px;
+}
+.name-and-date .date {
+  color: rgb(80, 80, 80);
+}
+.post-content {
+  padding-top: 2em;
+}

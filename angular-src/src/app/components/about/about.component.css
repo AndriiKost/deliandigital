@@ -1,0 +1,36 @@
+.light-section {
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+.__headline:after {
+  position: absolute;
+  margin-top: 1em;
+  content: "";
+  width: 60px;
+  height: 5px;
+  background-color: rgb(0, 0, 0);
+}
+.__headline {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.__headline h1 {
+  color: #000;
+  font-weight: bolder;
+}
+.content {
+  padding-top: 3em;
+  font-size: 1.2em;
+  letter-spacing: .03em;
+}
+.light-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.left-content {
+  padding: 8em 3em;
+}
+.right-content img {
+  width: 100%;
+}

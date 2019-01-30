@@ -1,0 +1,72 @@
+ul {
+  padding: 0;
+  margin: 0;
+}
+.work-section {
+  background-color: rgb(240, 240, 240);
+  padding: 8em 3em 3em 3em;
+}
+.description {
+  padding-top: 3em;
+  max-width: 50%;
+  padding-right: 2em;
+}
+.__headline:after {
+  position: absolute;
+  margin-top: 1em;
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #000;
+}
+.__headline {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.__headline h1 {
+  font-weight: bolder;
+}
+.description p {
+  font-size: 1.2em;
+  letter-spacing: .05em;
+  line-height: 1.4em;
+}
+.work-boxes {
+  padding-top: 3em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3em;
+}
+.work-container {
+  height: 400px;
+  background-color: #fff;
+}
+.work-container {
+  cursor: pointer;
+  height: 450px;
+}
+.work-picture {
+  width: 100%;
+}
+.work-picture img {
+  width: 100%;
+}
+.box-work-content {
+  padding: 1.5em;
+}
+.box-work-content h5 {
+  line-height: 1.3;
+  font-weight: bold;
+  padding-top: .5em;
+}
+.tech-used {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  padding-top: 4em;
+}
+.tech-used > li {
+  font-size: .8em;
+}

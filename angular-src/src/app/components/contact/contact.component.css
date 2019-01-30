@@ -1,0 +1,125 @@
+.contact-section {
+  margin-top: 8em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: rgb(240, 212, 60);
+}
+.left-contact-intro .content {
+  padding: 0 3em 2em 3em;
+}
+.transition-block {
+  background-color: rgb(36, 36, 36);
+  height: 40px;
+}
+.right-contact-intro img {
+  width: 100%;
+  /* margin-top: -3em; */
+}
+.white-container {
+  background-color: #fff;
+  padding: 2em 3em 0 3em;
+}
+h1 {
+  font-size: 3.8em;
+  font-weight: bolder;
+  letter-spacing: .05em;
+}
+.__headline:after {
+  position: absolute;
+  margin-top: 1em;
+  content: "";
+  width: 60px;
+  height: 5px;
+  background-color: rgb(65, 64, 64);
+}
+.__headline {
+  padding-bottom: 3em;
+}
+.btn-action {
+  color: #000;
+  border: 2px solid #000;
+  background: rgb(240, 212, 60);
+  padding: .6em;
+  box-shadow: -4px 4px 0 0 #000;
+  font-weight: bold;
+  letter-spacing: .05em;
+}
+.btn-action:hover{
+  cursor: pointer;
+}
+.btn-action:focus {
+  outline: none;
+}
+.contact-container {
+  margin-top: 3em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #fff;
+  color: #000;
+}
+.btn-action-white {
+  color: #000;
+  border: 2px solid #000;
+  background: #fff;
+  padding: .6em;
+  box-shadow: -4px 4px 0 0 #000;
+  font-weight: bold;
+  letter-spacing: .05em;
+}
+.btn-action-white:hover{
+  cursor: pointer;
+}
+.btn-action-white:focus {
+  outline: none;
+}
+.contact-container {
+  padding: 4em 3em;
+}
+.contact-form-full-width {
+  display: flex;
+  flex-direction: row;
+}
+.contact-form-full-width input:first-child {
+  margin-right: 15px;
+}
+.message textarea {
+  margin-top: 15px;
+  height: 10em;
+  resize: none;
+}
+form {
+  padding-top: 3em;
+}
+form input {
+  color: #000;
+}
+.form-control {
+  border: 2px solid #000;
+  border-radius: 0px;
+}
+form .message {
+  padding-bottom: 2em;
+}
+form .message input {
+  height: 40px;
+}
+.contact-info {
+  list-style: none;
+  padding: 1em 0 0 0;
+  margin: 0;
+}
+.contact-info li {
+  padding-top: 1em;
+  font-size: 1.2em;
+}
+.contact-info li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.4em;
+}
+.__headline h2 {
+  font-size: 3em;
+  letter-spacing: .05em;
+  font-weight: bolder;
+}

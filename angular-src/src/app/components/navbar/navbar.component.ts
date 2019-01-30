@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  logoUrl = 'assets/Delian-Digital--FINALS-W.png';
 
   constructor(
     private authService: AuthService,

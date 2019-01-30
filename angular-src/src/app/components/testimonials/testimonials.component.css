@@ -1,0 +1,24 @@
+.simple-slider-section {
+  background-color: rgb(103, 88, 224);
+  height: 400px;
+  color: #fff;
+}
+.slider-content {
+  width: 50%;
+  margin: auto;
+  padding-top: 100px;
+}
+.left-arrow {
+  float: left;
+  margin-left: 10px;
+}
+.right-arrow {
+  float: right;
+  margin-right: 10px;
+}
+.left-arrow, .right-arrow {
+  padding-top: 150px;
+}
+.left-arrow, .right-arrow:hover {
+  cursor: pointer;
+}

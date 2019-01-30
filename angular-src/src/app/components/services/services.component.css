@@ -1,0 +1,75 @@
+.dark-section {
+  height: 100%;
+  background-color: rgb(36, 36, 36);
+  padding-top: 5em;
+}
+.__headline:after {
+  position: absolute;
+  margin-top: 1em;
+  content: "";
+  width: 60px;
+  height: 5px;
+  background-color: rgb(243, 117, 119);
+}
+.__headline {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.__headline h1 {
+  color: #fff;
+  font-weight: bolder;
+}
+.section-header {
+  padding: 5em 3em;
+}
+.section-description {
+  padding-top: 4em;
+  width: 45%;
+  color: #fff;
+  line-height: 1.8em;
+  font-size: 1.2em;
+}
+.services-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2em;
+  color: #fff;
+  list-style: none;
+}
+.read-more {
+  padding: 3em 1em 2em 1em;
+}
+.button {
+  padding: .5em;
+  border: 1px solid #fff;
+  width: 50%;
+  text-align: center;
+}
+.button:hover {
+  color: yellow;
+  cursor: pointer;
+  border: 1px solid yellow;
+  border-radius: 2px;
+}
+.button h3 {
+  font-size: 1.2em;
+}
+.cta-yellow {
+  margin-top: 5em;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+}
+.cta-right {
+  background-color: rgb(240, 212, 60);
+  padding: 2em;
+}
+.cta-link {
+  font-weight: bold;
+  color: #000;
+}
+.cta-link:hover {
+  text-decoration: none;
+
+}

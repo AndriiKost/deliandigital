@@ -1,0 +1,55 @@
+<div class="contact-section">
+  <div class="left-contact-intro">
+    <div class="white-container">
+      <h1>Connect</h1>
+    </div>
+    <div class="content">
+      <div class="__headline">
+        <h1>with Our Circle</h1>
+      </div>
+      <p>We are digital thinkers who build products for you. We draw our strength from self-development, exchanging ideas and giving back to the community. Experience our culture and get to know our people.</p>
+      <p>Pick a place where you feel comfortable or just contact one of our Customer Success Guides straight away.</p>
+      <button class="btn-action">Request Estimate</button>
+    </div>
+  </div>
+
+  <div class="right-contact-intro">
+    <img src="https://images.unsplash.com/photo-1531901783755-825e82c0d762?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1662&q=80" />
+  </div>
+</div>
+
+<div class="contact-container">
+  <div class="left-contact-form">
+  <div class="__headline">
+    <h2>Let's talk</h2>
+  </div>
+    <ul class="contact-info">
+      <li class="padding-top">Phone
+        <p>
+          <a href="tel3148854259">+1 314 885 4259</a>
+        </p>
+      </li>
+      <li class="padding-top">Got a digital product to discuss?
+          <p>
+              <a href="mailto:hello@deliandigital.com">hello@deliandigital.com</a>
+          </p>
+        </li>
+    </ul>
+  </div>
+  <div class="right-contact-intro">
+    <div class="contact-head">
+      <h2>Do you want to build a product, hire a developer or simply have a question? Leave us a message.</h2>
+    </div>
+      <form (submit)="onContactSubmit()">
+        <div class="contact-form-full-width">
+          <input type="text" class="form-control" [(ngModel)]="name" placeholder="Name" name="username">
+          <input type="text" class="form-control" [(ngModel)]="email" placeholder="Email" name="email">
+        </div>
+        <div class="message">
+          <!-- <label>How can we help you?</label> -->
+          <textarea type="text" class="form-control" [(ngModel)]="message" placeholder="How can we help you?" name="message"></textarea>
+        </div>
+        <input type="submit" class="btn-action-white" value="Send Message">
+      </form>
+    </div>
+</div>

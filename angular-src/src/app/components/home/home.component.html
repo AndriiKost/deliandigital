@@ -1,23 +1,38 @@
-<div class="jumbotron text-center">
-  <h1>I'm a MEAN App</h1>
-  <p class="lead">Mong Express Angular Node Authentication</p>
-  <div>
-    <a class="btn btn-primary" [routerLink]="['/register']">Register</a> <a style="margin-left: 10px;" class="btn btn-primary" [routerLink]="['/login']">Login</a>
-  </div>
-</div>
-
-
-<div class="row">
-  <div class="col-md-4">
-    <h3>Express Backend</h3>
-    <p>Node.js and Express are rock! Espessially if you add some Mongooose</p>
-  </div>
-  <div class="col-md-4">
-      <h3>Angular Frontend</h3>
-      <p>Angular to generate all components</p>
-    </div>
-    <div class="col-md-4">
-        <h3>JWT Token</h3>
-        <p>Full featured authentication using JSON Web Tokens.</p>
+<div class="header">
+    <div class="intro">
+      <div class="left">
+          <p>The digital product design & development<br>
+          company and your guide on the digital<br>
+          transformation journey.</p>
       </div>
+      <div class="right">
+          <p>Do you have a product in mind?<br><a [routerLink]="['/contact']">Get in touch</a>.</p>
+      </div>
+    </div>
+  </div>
+<div class="slider-container">
+  <ul>
+    <li>
+      <div class="slide-section">
+        <div class="slide-description-container">
+          <div class="transition-rectangle">
+
+          </div>
+          <div class="slide-description">
+            <p>Logo</p>
+            <h1>Boldare Company</h1>
+            <p>At Boldare, we don’t just talk about great products. We make them with our clients. Read our case studies and find out how we’ve helped them bring great products to market:</p>
+            <p><a class="case-study" href="#">Case Study -></a></p>
+          </div>
+        </div>
+        <div class="slide-image">
+          <img src="http://doanarae.com/doanarae/8470-nice-pictures-for-desktop-background_17523.jpg" />
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
+<app-work></app-work>
+<app-testimonials></app-testimonials>
+<app-services></app-services>
+<app-about></app-about>

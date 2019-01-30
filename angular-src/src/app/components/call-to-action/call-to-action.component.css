@@ -1,0 +1,18 @@
+.cta-yellow {
+  margin-top: 5em;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+}
+.cta-right {
+  background-color: rgb(240, 212, 60);
+  padding: 2em;
+}
+.cta-link {
+  font-weight: bold;
+  color: #000;
+}
+.cta-link:hover {
+  text-decoration: none;
+
+}

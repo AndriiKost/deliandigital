@@ -1,38 +1,52 @@
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-    <h5 class="my-0 mr-md-auto font-weight-normal">MEAN Auth App</h5>
-    <nav class="my-2 my-md-0 mr-md-3">
-      <a
-      class="p-2 text-dark"
-      [routerLink]="['/']"
-      [routerLinkActive]="['active']"
-      [routerLinkActiveOptions]="{exact:true}">Home</a>
+
+  <div class="navbar-container">
+    <img [routerLink]="['/']" id='logo' src={{logoUrl}} />
+    <nav class="navbar">
+        <a
+        class="navbar-item"
+        [routerLink]="['/work']" [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact:true}">Work</a>
+        <a
+        class="navbar-item"
+        [routerLink]="['/services']" [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact:true}">Services</a>
+        <!-- <a
+        class="navbar-item"
+        [routerLink]="['/login']" [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact:true}">Approach</a> -->
+        <a
+        class="navbar-item"
+        [routerLink]="['/about']" [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact:true}">About</a>
+        <a
+        class="navbar-item"
+        [routerLink]="['/contact']" [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact:true}">Contact</a>
+        <a
+        class="navbar-item"
+        [routerLink]="['/blog']" [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact:true}">Blog</a>
       <a
       *ngIf="authService.loggedIn()"
-      class="p-2 text-dark"
+      class="navbar-item"
       [routerLink]="['/dashboard']"
       [routerLinkActive]="['active']"
       [routerLinkActiveOptions]="{exact:true}">Dashboard</a>
       <a
       *ngIf="authService.loggedIn()"
-      class="p-2 text-dark"
+      class="navbar-item"
       [routerLink]="['/profile']"
       [routerLinkActive]="['active']"
       [routerLinkActiveOptions]="{exact:true}">Profile</a>
       <a
       *ngIf="!authService.loggedIn()"
-      class="p-2 text-dark"
-      [routerLink]="['/login']" [routerLinkActive]="['active']"
-      [routerLinkActiveOptions]="{exact:true}">Login</a>
+      class="left-only"
+      href="#"
+      (click)="onLogoutClick()">Login</a>
       <a
       *ngIf="authService.loggedIn()"
-      class="p-2 text-dark"
+      class="left-only"
       href="#"
       (click)="onLogoutClick()">Logout</a>
     </nav>
-    <a
-    *ngIf="!authService.loggedIn()"
-    class="btn btn-outline-primary"
-    [routerLink]="['/register']"
-    [routerLinkActive]="['active']"
-    [routerLinkActiveOptions]="{exact:true}">Register</a>
   </div>

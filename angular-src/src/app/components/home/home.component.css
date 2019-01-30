@@ -1,0 +1,68 @@
+.header {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(36, 36, 36);
+  height: 20em;
+  padding-top: 4em;
+}
+.left, .right {
+  color: #fff;
+  letter-spacing: .025em;
+  font-weight: 400;
+  line-height: 2em;
+}
+.intro {
+  padding: 5em 3em 3em 3em;
+}
+.left {
+  float: left;
+  font-size: 1.1em;
+}
+.right {
+  float: right;
+  max-width: 300px;
+  font-size: .9em;
+}
+.right a {
+  color: #fff;
+}
+.right a:hover {
+  text-decoration: none;
+  color: yellow;
+}
+.slide-section {
+  color: rgb(36, 36, 36);;
+}
+.slide-section {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+}
+.slide-image img {
+  width: 100%;
+  height: auto;
+}
+.slider-container ul {
+  list-style: none;
+}
+.slide-description {
+  padding: 3em;
+}
+.case-study {
+  color: #000;
+}
+.transition-rectangle {
+  height: 50px;
+  background-color: rgb(36, 36, 36);
+}
+ul{
+  margin: 0;
+  padding: 0;
+  margin-top: -1px;
+}
+.slide-description p {
+  padding-top: 1em;
+  font-weight: 100;
+  color: rgb(116, 114, 114);
+}
