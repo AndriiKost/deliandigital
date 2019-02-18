@@ -1,0 +1,39 @@
+<div class="white-section">
+  <h6>CASE STUDY</h6>
+  <h1>{{project.name}}</h1>
+  <p>{{project.description}}</p>
+</div>
+<div class="back" (click)="toCaseStudies()">
+  Back
+</div>
+<div class="head-image">
+  <img src={{project.image}} />
+</div>
+
+<div class="content-section-white">
+  <div class="author-info">
+    <div class="author-img"><img src="https://media.licdn.com/dms/image/C5603AQG_GxHAtaBQUg/profile-displayphoto-shrink_200_200/0?e=1553731200&v=beta&t=7H6vzjUQ1YT6lRR0kmMm7eK8YgxAixYO_yeqpWRmRoI" /> </div>
+    <div class="name-and-date">
+      <p>Andrii Kost</p>
+      <p class="date">Full Stack Developer</p>
+    </div>
+  </div>
+  <div class="main-content">
+    <p>Setting the scene: one year to dominate 27 markets worldwide</p>
+    <p>When BlaBlaCar approached Boldare, they were at a stage of rapid growth with around 24 million users already buzzing about their excellent carpooling platform. But the visionaries at BlaBlaCar understood that the competition never sleeps. Other tech startups around the world were quickly entering the race for a piece of the carpooling pie. BlaBlaCar’s traction was impressive on their home turf in France and they wanted to expand quickly into 27 markets around the world, ensuring their competitive advantage over other travel and carpooling app contenders. They had just over a year to succeed by establishing themselves as the leading and most trustworthy platform.</p>
+    <p>Setting the scene: one year to dominate 27 markets worldwide</p>
+    <p>When BlaBlaCar approached Boldare, they were at a stage of rapid growth with around 24 million users already buzzing about their excellent carpooling platform. But the visionaries at BlaBlaCar understood that the competition never sleeps. Other tech startups around the world were quickly entering the race for a piece of the carpooling pie. BlaBlaCar’s traction was impressive on their home turf in France and they wanted to expand quickly into 27 markets around the world, ensuring their competitive advantage over other travel and carpooling app contenders. They had just over a year to succeed by establishing themselves as the leading and most trustworthy platform.</p>
+    <ul class="tech-spec">
+      <li *ngFor="let tech of project.technologiesUsed">
+          <img src={{tech.icon}} />
+          <p>{{tech.text}}</p>
+      </li>
+    </ul>
+  </div>
+  <div class="sidebar">
+    <hr>
+    <p>Let's talk about<br>
+      your business</p>
+      <button [routerLink]="['/contact']" class="btn-action">Contact</button>
+  </div>
+</div>

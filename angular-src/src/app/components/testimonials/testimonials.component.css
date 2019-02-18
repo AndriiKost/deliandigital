@@ -6,7 +6,7 @@
 .slider-content {
   width: 50%;
   margin: auto;
-  padding-top: 100px;
+  padding-top: 2em;
 }
 .left-arrow {
   float: left;
@@ -21,4 +21,19 @@
 }
 .left-arrow, .right-arrow:hover {
   cursor: pointer;
+}
+.slider-logo {
+  width: 250px;
+}
+.slider-content img {
+  padding: 1em;
+  width: 100%;
+}
+h2 {
+  font-weight: bold;
+  padding-top: 1em;
+  text-align: center;
+  font-size: 1.5em;
+  letter-spacing: .05em;
+  line-height: 1.5em;
 }

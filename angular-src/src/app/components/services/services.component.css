@@ -40,20 +40,21 @@
 .read-more {
   padding: 3em 1em 2em 1em;
 }
-.button {
-  padding: .5em;
-  border: 1px solid #fff;
-  width: 50%;
-  text-align: center;
+.btn-action-white {
+  margin: 1em 0;
+  color: #fff;
+  border: 2px solid #fff;
+  background: transparent;
+  padding: .6em;
+  box-shadow: -4px 4px 0 0 #fff;
+  font-weight: bold;
+  letter-spacing: .05em;
 }
-.button:hover {
-  color: yellow;
+.btn-action-white:hover{
   cursor: pointer;
-  border: 1px solid yellow;
-  border-radius: 2px;
 }
-.button h3 {
-  font-size: 1.2em;
+.btn-action-white:focus {
+  outline: none;
 }
 .cta-yellow {
   margin-top: 5em;
@@ -72,4 +73,23 @@
 .cta-link:hover {
   text-decoration: none;
 
+}
+.services-breakdown {
+  padding: 1em;
+}
+.services-breakdown li {
+  font-size: .8em;
+  padding: 2px 0;
+  line-height: 2em;
+  letter-spacing: .02em;
+}
+.single-service-container h6 {
+  font-weight: bolder;
+  margin-bottom: 2em;
+}
+.single-service-container p {
+  padding-top: 1em;
+  font-size: .8em;
+  line-height: 2em;
+  letter-spacing: .02em;
 }

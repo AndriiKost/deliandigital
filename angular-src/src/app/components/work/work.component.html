@@ -3,28 +3,23 @@
       <h1>Work</h1>
   </div>
   <div class="description">
-    <p>At Boldare, we don’t just talk about great products. We make them with our clients. Read our case studies and find out how we’ve helped them bring great products to market:</p>
+    <p>At Delian Digital, we don’t just talk about great products. We make them with our clients. Read our case studies and find out how we’ve helped them bring great products to market:</p>
   </div>
   <div class="work-boxes">
-    <div class="work-container">
+    <div class="work-container" *ngFor="let project of projects" [routerLink]="['/work/' + project.id]">
       <div class="work-picture">
-        <img src="https://cdn-images-1.medium.com/max/1600/0*hTmEi_DBg32JivxE.png" />
+        <img src={{project.image}} />
       </div>
       <div class="box-work-content">
         <div class="__headline">
-          <h5>How to deal with rapid growth and the aggressive expansion of a startup.</h5>
+          <h5>{{project.name}}</h5>
         </div>
         <ul class="tech-used">
-          <li>#Angular</li>
-          <li>#Node.js</li>
-          <li>MongoDB</li>
+          <li>#{{project.technologiesUsed[0].text}}</li>
+          <li>#{{project.technologiesUsed[1].text}}</li>
+          <li>#{{project.technologiesUsed[2].text}}</li>
         </ul>
       </div>
     </div>
-    <div class="work-container"></div>
-    <div class="work-container"></div>
-    <div class="work-container"></div>
-    <div class="work-container"></div>
-    <div class="work-container"></div>
   </div>
 </div>

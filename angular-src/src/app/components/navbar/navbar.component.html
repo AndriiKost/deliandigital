@@ -26,27 +26,5 @@
         class="navbar-item"
         [routerLink]="['/blog']" [routerLinkActive]="['active']"
         [routerLinkActiveOptions]="{exact:true}">Blog</a>
-      <a
-      *ngIf="authService.loggedIn()"
-      class="navbar-item"
-      [routerLink]="['/dashboard']"
-      [routerLinkActive]="['active']"
-      [routerLinkActiveOptions]="{exact:true}">Dashboard</a>
-      <a
-      *ngIf="authService.loggedIn()"
-      class="navbar-item"
-      [routerLink]="['/profile']"
-      [routerLinkActive]="['active']"
-      [routerLinkActiveOptions]="{exact:true}">Profile</a>
-      <a
-      *ngIf="!authService.loggedIn()"
-      class="left-only"
-      href="#"
-      (click)="onLogoutClick()">Login</a>
-      <a
-      *ngIf="authService.loggedIn()"
-      class="left-only"
-      href="#"
-      (click)="onLogoutClick()">Logout</a>
     </nav>
   </div>

@@ -39,20 +39,26 @@ ul {
   grid-gap: 3em;
 }
 .work-container {
+  position: relative;
   height: 400px;
   background-color: #fff;
-}
-.work-container {
   cursor: pointer;
   height: 450px;
+}
+.work-container:focus {
+  outline: none;
 }
 .work-picture {
   width: 100%;
 }
 .work-picture img {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 .box-work-content {
+  position: absolute;
+  bottom: 0;
   padding: 1.5em;
 }
 .box-work-content h5 {
