@@ -93,3 +93,30 @@
   line-height: 2em;
   letter-spacing: .02em;
 }
+
+@media (max-width: 800px) {
+  .section-header {
+    margin-top: 3em;
+  }
+  .dark-section {
+    padding-top: 0;
+  }
+  .section-description {
+    padding-top: 2em;
+    width: 100%;
+  }
+  .services-list {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: .5em;
+  }
+}
+@media (max-width: 500px) {
+  .services-list {
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+  }
+
+h1 {
+  font-size: 1.7em;
+}
+}

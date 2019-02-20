@@ -37,3 +37,15 @@ h2 {
   letter-spacing: .05em;
   line-height: 1.5em;
 }
+
+@media (max-width: 800px) {
+  .slider-content {
+    width: 75%;
+  }
+  .simple-slider-section {
+    height: 300px;
+  }
+  h2 {
+    font-size: 1em;
+  }
+}

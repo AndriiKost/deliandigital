@@ -16,3 +16,17 @@
   text-decoration: none;
 
 }
+@media (max-width: 800px) {
+  .cta-yellow {
+    margin-top: 0;
+    grid-template-columns: 1fr 2fr;
+  }
+  .cta-right h3 {
+    font-size: 1em;
+  }
+}
+@media (max-width: 500px) {
+  .cta-right {
+    padding: 1em;
+  }
+}

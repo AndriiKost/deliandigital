@@ -66,3 +66,36 @@ ul{
   font-weight: 100;
   color: rgb(116, 114, 114);
 }
+
+
+@media (max-width: 1000px) {
+  .slide-section {
+    grid-template-columns: 1fr;
+  }
+  .slide-image img {
+    width: 90%;
+    height: auto;
+    margin: 0 5% 5% 5%;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  .left, .right {
+    float: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .slide-description {
+    padding: 2em;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  .header {
+    height: 17em;
+  }
+  .intro {
+    padding: 3em 3em 0 3em;
+    font-size: .8em;
+  }
+}

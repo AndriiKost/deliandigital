@@ -38,3 +38,19 @@
   color: rgb(136, 17, 135);
 }
 
+@media (max-width: 1000px) {
+  .navbar-container {
+    grid-template-columns: 1fr 2fr;
+  }
+  #logo {
+    max-height: 30px;
+  }
+  .navbar {
+    padding: 0;
+  }
+}
+@media (max-width: 550px) {
+  .navbar {
+    display: none;
+  }
+}
