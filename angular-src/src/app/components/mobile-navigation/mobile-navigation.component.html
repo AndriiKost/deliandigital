@@ -1,31 +1,42 @@
+<div *ngIf="mobileMenu" class="nav-menu">
+  <div class="container" (click)="changeStyleClass()" [ngClass]="status ? 'change' : null">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+</div>
 
-  <div class="navbar-container">
-    <img [routerLink]="['/']" id='logo' src={{logoUrl}} />
-    <nav class="navbar">
-        <a
+<div *ngIf="status" class="menu-content">
+  <ul>
+    <li>
+      <a (click)="changeStyleClass()"
         class="navbar-item"
         [routerLink]="['/work']" [routerLinkActive]="['active']"
         [routerLinkActiveOptions]="{exact:true}">Work</a>
-        <a
+    </li>
+    <li>
+      <a (click)="changeStyleClass()"
         class="navbar-item"
         [routerLink]="['/services']" [routerLinkActive]="['active']"
         [routerLinkActiveOptions]="{exact:true}">Services</a>
-        <!-- <a
-        class="navbar-item"
-        [routerLink]="['/login']" [routerLinkActive]="['active']"
-        [routerLinkActiveOptions]="{exact:true}">Approach</a> -->
-        <a
+    </li>
+    <li>
+      <a (click)="changeStyleClass()"
         class="navbar-item"
         [routerLink]="['/about']" [routerLinkActive]="['active']"
         [routerLinkActiveOptions]="{exact:true}">About</a>
-        <a
+    </li>
+    <li>
+      <a (click)="changeStyleClass()"
         class="navbar-item"
         [routerLink]="['/contact']" [routerLinkActive]="['active']"
         [routerLinkActiveOptions]="{exact:true}">Contact</a>
-        <a
+    </li>
+    <li>
+      <a (click)="changeStyleClass()"
         class="navbar-item"
         [routerLink]="['/blog']" [routerLinkActive]="['active']"
         [routerLinkActiveOptions]="{exact:true}">Blog</a>
-    </nav>
-    <app-mobile-navigation></app-mobile-navigation>
-  </div>
+    </li>
+  </ul>
+</div>

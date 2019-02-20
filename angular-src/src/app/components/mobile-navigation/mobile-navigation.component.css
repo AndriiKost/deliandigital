@@ -1,0 +1,59 @@
+.nav-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.5em 1em 0 0;
+  background: rgb(36, 36, 36);
+  z-index: 20;
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(189, 189, 189);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+/* MENU CONTENT */
+.menu-content {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 10%;
+  background: #242424;
+  opacity: 1;
+}
+
+.menu-content ul {
+  list-style: none;
+  float: right;
+  padding: 1em 2em 0 0;
+  text-align: right;
+}
+
+.menu-content li {
+  padding-top: 1em;
+}
+
+.navbar-item {
+  color: #fff;
+  font-size: 2.1em;
+}

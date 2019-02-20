@@ -25,6 +25,7 @@ import { CallToActionComponent } from './components/call-to-action/call-to-actio
 import { BlogComponent } from './components/blog/blog.component';
 import { CaseStudyComponent } from './components/case-study/case-study.component';
 import { EstimateComponent } from './components/estimate/estimate.component';
+import { MobileNavigationComponent } from './components/mobile-navigation/mobile-navigation.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -66,7 +67,8 @@ const appRoutes: Routes = [
     CallToActionComponent,
     BlogComponent,
     CaseStudyComponent,
-    EstimateComponent
+    EstimateComponent,
+    MobileNavigationComponent
   ],
   imports: [
     BrowserModule,
