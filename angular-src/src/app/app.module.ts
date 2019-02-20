@@ -24,6 +24,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { CaseStudyComponent } from './components/case-study/case-study.component';
+import { EstimateComponent } from './components/estimate/estimate.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
   // , canActivate: [AuthGuard]
   },
   { path: 'contact', component: ContactComponent },
+  { path: 'estimate', component: EstimateComponent },
   { path: 'work', component: WorkComponent },
   { path: 'work/:id', component: CaseStudyComponent },
   { path: 'services', component: ServicesComponent },
@@ -63,7 +65,8 @@ const appRoutes: Routes = [
     ContactComponent,
     CallToActionComponent,
     BlogComponent,
-    CaseStudyComponent
+    CaseStudyComponent,
+    EstimateComponent
   ],
   imports: [
     BrowserModule,

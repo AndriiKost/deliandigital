@@ -1,0 +1,23 @@
+* {
+  background: transparent;
+}
+.estimate-fade {
+  position: relative;
+  margin: 10% 0 10% 25%;
+  background-color: white;
+}
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-weight: bolder;
+}
+.close-modal:hover{
+  cursor: pointer;
+}
+.close-modal:focus {
+  outline: none;
+}
+.post-content {
+  margin: 100px;
+}

@@ -9,7 +9,7 @@
       </div>
       <p>We are digital thinkers who build products for you. We draw our strength from self-development, exchanging ideas and giving back to the community. Experience our culture and get to know our people.</p>
       <p>Pick a place where you feel comfortable or just contact one of our Customer Success Guides straight away.</p>
-      <button class="btn-action">Request Estimate</button>
+      <button class="btn-action" [routerLink]="['/estimate']">Request Estimate</button>
     </div>
   </div>
 
@@ -31,7 +31,7 @@
       </li>
       <li class="padding-top">Got a digital product to discuss?
           <p>
-              <a href="mailto:hello@deliandigital.com">hello@deliandigital.com</a>
+              <a href="mailto:a.kost@deliandigital.com">a.kost@deliandigital.com</a>
           </p>
         </li>
     </ul>
@@ -40,16 +40,15 @@
     <div class="contact-head">
       <h2>Do you want to build a product, hire a developer or simply have a question? Leave us a message.</h2>
     </div>
-      <form (submit)="onContactSubmit()">
+      <!-- <form (submit)="onContactSubmit()">
         <div class="contact-form-full-width">
           <input type="text" class="form-control" [(ngModel)]="name" placeholder="Name" name="username">
           <input type="text" class="form-control" [(ngModel)]="email" placeholder="Email" name="email">
         </div>
         <div class="message">
-          <!-- <label>How can we help you?</label> -->
           <textarea type="text" class="form-control" [(ngModel)]="message" placeholder="How can we help you?" name="message"></textarea>
         </div>
         <input type="submit" class="btn-action-white" value="Send Message">
-      </form>
+      </form> -->
     </div>
 </div>
