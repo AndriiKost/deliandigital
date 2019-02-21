@@ -19,10 +19,10 @@
     </div>
   </div>
   <div class="main-content">
-    <!-- <p>Setting the scene: one year to dominate 27 markets worldwide</p>
-    <p>When BlaBlaCar approached Boldare, they were at a stage of rapid growth with around 24 million users already buzzing about their excellent carpooling platform. But the visionaries at BlaBlaCar understood that the competition never sleeps. Other tech startups around the world were quickly entering the race for a piece of the carpooling pie. BlaBlaCar’s traction was impressive on their home turf in France and they wanted to expand quickly into 27 markets around the world, ensuring their competitive advantage over other travel and carpooling app contenders. They had just over a year to succeed by establishing themselves as the leading and most trustworthy platform.</p>
-    <p>Setting the scene: one year to dominate 27 markets worldwide</p>
-    <p>When BlaBlaCar approached Boldare, they were at a stage of rapid growth with around 24 million users already buzzing about their excellent carpooling platform. But the visionaries at BlaBlaCar understood that the competition never sleeps. Other tech startups around the world were quickly entering the race for a piece of the carpooling pie. BlaBlaCar’s traction was impressive on their home turf in France and they wanted to expand quickly into 27 markets around the world, ensuring their competitive advantage over other travel and carpooling app contenders. They had just over a year to succeed by establishing themselves as the leading and most trustworthy platform.</p> -->
+    <p>{{project.role}}</p>
+    <p>{{project?.result}}</p>
+    <p></p>
+    <p *ngIf="project?.resource">Read more: <a href={{project?.resource}} target="_blank">{{project?.resource}}</a></p>
     <ul class="tech-spec">
       <li *ngFor="let tech of project.technologiesUsed">
           <img src={{tech.icon}} />
