@@ -24,7 +24,6 @@ export class SuccessModalComponent implements OnInit {
   ngOnInit() {
     this.projectDuration = this.estimateService.projectDuration;
     this.totalCost = this.estimateService.totalCost;
-    // console.log(`PROJECT DURATION ${this.projectDuration}, PROJECT COST ${this.totalCost}`);
   }
 
   registerUser(): boolean {
@@ -39,10 +38,10 @@ export class SuccessModalComponent implements OnInit {
       this.formValid = true;
       // Register User
       this.estimateService.submitUser(user).subscribe(data => {
+        console.log(`PROJECT DURATION ${this.projectDuration}, PROJECT COST ${this.totalCost}`);
         console.log(data);
+        this.router.navigate(['/journey']);
       });
-
-      this.router.navigate(['/journey']);
       return true;
     } else {
       this.formValid = false;

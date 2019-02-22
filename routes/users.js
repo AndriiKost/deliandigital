@@ -7,6 +7,8 @@ const User = require('../models/user');
 
 // Post estimate
 router.get('/estimate', (req, res, next) => {
+  console.log(`############### REQ BODY USER => ${req.body.user}`);
+  console.log(`############### REQ BODY => ${req.body}`);
   let newUser = new User({
     name: req.body.user.name,
     email: req.body.user.email,
@@ -19,13 +21,13 @@ router.get('/estimate', (req, res, next) => {
   //   projectCost: 'req.body.totalCost',
   //   projectDuration: 'req.body.totalDuration'
   // })
+  console.log(`################# NEW USER => ${newUser}`);
   newUser.save(function (err) {
     if (err) {
         return next(err);
     }
     res.send('Geo Objects created successfully')
   })
-  console.log(newUser);
 });
 
 // // Register
