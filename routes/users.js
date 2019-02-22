@@ -6,12 +6,12 @@ const config = require('../config/database');
 const User = require('../models/user');
 
 // Post estimate
-router.get('/estimate', (req, res) => {
+router.get('/estimate', (req, res, next) => {
   let newUser = new User({
-    name: req.body.name,
-    email: req.body.email,
-    projectCost: req.body.totalCost,
-    projectDuration: req.body.totalDuration
+    name: req.body.user.name,
+    email: req.body.user.email,
+    projectCost: req.body.user.projectCost,
+    projectDuration: req.body.user.projectDuration
   })
   // let newUser = new User({
   //   name: 'req.body.name',
