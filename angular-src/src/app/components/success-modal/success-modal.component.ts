@@ -37,11 +37,9 @@ export class SuccessModalComponent implements OnInit {
     if (this.validateService.validateEmail(user.email)) {
       this.formValid = true;
       // Register User
-      this.estimateService.submitUser(user).subscribe(data => {
+      this.estimateService.submitUser(JSON.stringify(user));
         console.log(`PROJECT DURATION ${this.projectDuration}, PROJECT COST ${this.totalCost}`);
-        console.log(data);
         this.router.navigate(['/journey']);
-      });
       return true;
     } else {
       this.formValid = false;

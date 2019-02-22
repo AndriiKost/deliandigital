@@ -7,20 +7,16 @@ const User = require('../models/user');
 
 // Post estimate
 router.get('/estimate', (req, res, next) => {
-  console.log(`############### REQ BODY USER => ${req.body.user}`);
-  console.log(`############### REQ BODY => ${JSON.stringify(req.body)}`);
+  console.log(`############### REQ BODY USER => ${req.body.name}`);
+  console.dir(req);
+
   let newUser = new User({
-    name: req.body.name,
-    email: req.body.email,
-    projectCost: req.body.projectCost,
-    projectDuration: req.body.projectDuration
+    name: req.body.user.name,
+    email: req.body.user.email,
+    projectCost: req.body.user.projectCost,
+    projectDuration: req.body.user.projectDuration
   })
-  // let newUser = new User({
-  //   name: 'req.body.name',
-  //   email: 'req.body.email',
-  //   projectCost: 'req.body.totalCost',
-  //   projectDuration: 'req.body.totalDuration'
-  // })
+  
   console.log(`################# NEW USER => ${newUser}`);
   newUser.save(function (err) {
     if (err) {
