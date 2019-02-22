@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ValidateService } from 'src/app/services/validate.service';
 import { Router } from '@angular/router';
 import { EstimateService } from 'src/app/services/estimate.service';
@@ -9,8 +9,8 @@ import { EstimateService } from 'src/app/services/estimate.service';
   styleUrls: ['./success-modal.component.css']
 })
 export class SuccessModalComponent implements OnInit {
-  @Input() totalCost;
-  @Input() projectDuration;
+  totalCost: string;
+  projectDuration: string;
   name: string;
   email: string;
   formValid: boolean;
@@ -22,6 +22,9 @@ export class SuccessModalComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.projectDuration = this.estimateService.projectDuration;
+    this.totalCost = this.estimateService.totalCost;
+    // console.log(`PROJECT DURATION ${this.projectDuration}, PROJECT COST ${this.totalCost}`);
   }
 
   registerUser(): boolean {

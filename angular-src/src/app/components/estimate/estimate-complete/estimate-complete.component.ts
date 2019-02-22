@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { ClipboardService } from 'src/app/services/clipboard.service';
+import { EstimateService } from 'src/app/services/estimate.service';
 
 @Component({
   selector: 'app-estimate-complete',
@@ -15,7 +16,8 @@ export class EstimateCompleteComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private clipboardService: ClipboardService
+    private clipboardService: ClipboardService,
+    private estimateService: EstimateService
   ) { }
 
   ngOnInit() {
@@ -67,6 +69,8 @@ export class EstimateCompleteComponent implements OnInit {
   }
 
   success() {
+    this.estimateService.totalCost = this.totalValue;
+    this.estimateService.projectDuration = this.projectDuration;
     this.router.navigate(['/estimate/success']);
   }
 

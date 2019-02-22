@@ -7,6 +7,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class EstimateService {
+  public totalCost: string;
+  public projectDuration: string;
 
   constructor(
     private http: HttpClient
