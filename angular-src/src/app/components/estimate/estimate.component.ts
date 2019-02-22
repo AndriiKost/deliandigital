@@ -9,7 +9,7 @@ import { EstimateService } from 'src/app/services/estimate.service';
 export class EstimateComponent implements OnInit {
   questions;
   currentQuestion;
-  count;
+  count = 0;
   totalValue;
   estimateFinished = false;
 
@@ -31,10 +31,10 @@ export class EstimateComponent implements OnInit {
   nextQuestion(value) {
     this.count += 1;
     // if user submitted last question reset all stats and show finish component
-    if (this.count === this.questions.length) {
+    if (this.count >= this.questions.length) {
+      this.estimateFinished = true;
       this.currentQuestion = null;
       this.count = 0;
-      this.estimateFinished = true;
     } else {
       this.currentQuestion = this.questions[this.count];
       if (this.totalValue === null || this.totalValue === undefined) {
@@ -43,5 +43,9 @@ export class EstimateComponent implements OnInit {
         this.totalValue += value;
       }
     }
+  }
+
+  userInput(event) {
+    console.log(`EVENT => ${event}`);
   }
 }

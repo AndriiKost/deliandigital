@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
 import { estimateAPI } from '../api/estimateAPI';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class EstimateService {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   getAllQuestions() {
     return estimateAPI;
@@ -20,5 +24,10 @@ export class EstimateService {
       }
     });
     return projectToReturn;
+  }
+
+  submitUser(user) {
+    const url = 'https://deliandigital.herokuapp.com/users/estimate/';
+    return this.http.get(url, user);
   }
 }

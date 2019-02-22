@@ -1,4 +1,4 @@
 module.exports = {
-    database: 'mongodb://andrii:andriikost1@ds239681.mlab.com:39681/heroku_m1f8shqh',
+    database: 'mongodb+srv://andriiadmin:cz2NwXwsO08y1n77@cluster0-6okyj.mongodb.net/test?retryWrites=true',
     secret: 'yoursecret'
 };

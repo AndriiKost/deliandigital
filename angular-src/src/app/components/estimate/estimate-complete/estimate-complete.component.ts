@@ -67,7 +67,7 @@ export class EstimateCompleteComponent implements OnInit {
   }
 
   success() {
-    this.router.navigate(['/journey']);
+    this.router.navigate(['/estimate/success']);
   }
 
 }

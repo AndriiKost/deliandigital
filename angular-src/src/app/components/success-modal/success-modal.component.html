@@ -1,0 +1,18 @@
+<div class="success-modal">
+    <div *ngIf="formValid === false" class="help-message">
+        <h4>Please enter valid email.</h4>
+      </div>
+    <h3>We are excited to work with you and build your product!</h3>
+    <h4>Someone from our team will be in touch with you shortly after you submit this form.</h4>
+  <form class="user-info">
+    <div class="form-group">
+      <label>Email</label>
+      <input [(ngModel)]="email" id="email" name="email" type="text" class="form-control" required >
+    </div>
+    <div class="form-group">
+      <label>Name</label>
+      <input [(ngModel)]="name" id="name" name="name" type="text" class="form-control" required minlength="4">
+    </div>
+    <input type="submit" (click)="registerUser()" class="btn-action-white" value="Submit">
+  </form>
+</div>

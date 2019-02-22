@@ -64,10 +64,16 @@
 .btn-action-white:focus {
   outline: none;
 }
+.user-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+}
 
 @media (max-width: 800px) {
   .options {
     grid-template-columns: 1fr;
+
   }
 }
 

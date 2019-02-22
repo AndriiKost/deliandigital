@@ -163,7 +163,7 @@ form .message input {
 /* Clipboard styles */
 .clipboard-message {
   position: absolute;
-  top: 10em;
+  bottom: 5em;
   left: 5em;
   color: #fff;
   background-color: rgb(36, 36, 36);

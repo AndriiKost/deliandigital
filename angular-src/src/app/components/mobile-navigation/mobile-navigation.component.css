@@ -57,3 +57,6 @@
   color: #fff;
   font-size: 2.1em;
 }
+.active {
+  color: rgb(239, 210, 76) !important;
+}

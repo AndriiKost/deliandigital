@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 // import { LoginComponent } from './components/login/login.component';
@@ -29,6 +30,7 @@ import { MobileNavigationComponent } from './components/mobile-navigation/mobile
 import { EstimateCompleteComponent } from './components/estimate/estimate-complete/estimate-complete.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 import { JourneyComponent } from './components/journey/journey.component';
+import { SuccessModalComponent } from './components/success-modal/success-modal.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -48,6 +50,7 @@ const appRoutes: Routes = [
   { path: 'blog', component: BlogComponent },
   { path: 'register', redirectTo: 'login' },
   { path: 'journey', component: JourneyComponent },
+  { path: 'estimate/success', component: SuccessModalComponent },
   { path: '**', redirectTo: '' }
 ];
 
@@ -75,11 +78,13 @@ const appRoutes: Routes = [
     MobileNavigationComponent,
     EstimateCompleteComponent,
     ProgressBarComponent,
-    JourneyComponent
+    JourneyComponent,
+    SuccessModalComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes, { scrollPositionRestoration: 'enabled' })
   ],
   providers: [

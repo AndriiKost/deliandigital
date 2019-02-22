@@ -2,15 +2,15 @@
   <div *ngIf="!estimateFinished">
     <div class="estimate-title">
       <div *ngIf="count === 0 || !count">
-      <h3>Get your estimate in less then 5 minutes!</h3>
-      <p>Simply click on the answer to move along.</p>
-    </div>
+        <h3>Get your estimate in less then 5 minutes!</h3>
+        <p>Simply click on the answer to move along.</p>
+      </div>
       <div class="close-modal btn-action-white" [routerLink]="['/contact']">Close</div>
     </div>
     <div class="estimate-body">
       <!-- <app-progress-bar [progressValue]="count"></app-progress-bar> -->
-      <h1 *ngIf="currentQuestion" class="question-head">{{currentQuestion.question}}</h1>
-      <p class="user-help">For example: {{currentQuestion.help}}</p>
+      <h1  class="question-head">{{currentQuestion.question}}</h1>
+      <p  class="user-help">For example: {{currentQuestion.help}}</p>
       <ul class="options">
         <li *ngFor="let option of currentQuestion.options" (click)="nextQuestion(option.value)" class="btn-action-white">{{option.optionText}}</li>
       </ul>

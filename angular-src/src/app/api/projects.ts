@@ -62,7 +62,7 @@ export const ProjectsAPI = {
         name: "United States Tax Services",
         image: 'https://s3.amazonaws.com/project-pictures-andriikost-portfolio/usts.png',
         description: 'United States Tax Services (USTS) is a company located in Buffalo Grove, IL. The company provide a broad range of services such as: accounting, public notary, tax calculation, incorporation etc.',
-        role: 'My role was to completely redesign and built brand new website with brand new branding. USTS has onboard marketing eecutive who helped me during the proccess. We choose WordPress, because the company wants to drive organic traffic from social media by posting blog posts. Another reason was that WordPress is easy to maintain and edit for the marketing team.',
+        role: 'Our role was to completely redesign and built brand new website with brand new branding. USTS has onboard marketing eecutive who helped me during the proccess. We choose WordPress, because the company wants to drive organic traffic from social media by posting blog posts. Another reason was that WordPress is easy to maintain and edit for the marketing team.',
         result: 'With our hard work, able to adapt and work with the ongoing team together we were be able to automated some of the client\'s proccesses related to customer support, content management and billing through the website. New blog style generated thousands of views every month with new paying customers. After all Return On Investment and Branding is what matters.',
         resource: 'https://unitedstatestaxservices.us/',
         type: 'Full Stack',
@@ -94,9 +94,9 @@ export const ProjectsAPI = {
         link: "https://spoofingwilly.com/",
         name: "Spoofing Willy Street",
         image: 'https://s3.amazonaws.com/project-pictures-andriikost-portfolio/spoofingwilly-head.png',
-        description: 'Spoofing Willy Street is marketing consultancy company in Madison, WI. Spoofing Willy provide proffesional services like social media strategy, website development, photography, content creation etc.',
+        description: 'Spoofing Willy Street is a digital and traditional marketing consultancy company in Madison, WI. Spoofing Willy provide proffesional services like social media strategy, traditional marketing, postcards, graphic design, website development, photography, content creation and other.',
         role: 'Our role was to completely redesign, reengineer and improve performance of existing website. Create interactive User Experience, modern User Interface. We also helped with nnovation of internal and external software infrastracture and tools of the company. For this project We choose WordPress, becuase current team had experience with it.',
-        resource: 'https://spoofingwilly.com/2018/05/09/area-man-wakes-up-after-a-weekend-binge-to-something-frightening/',
+        resource: 'https://spoofingwilly.com/',
         type: 'Full Stack',
         technologiesUsed: [
           {
