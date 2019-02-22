@@ -10,7 +10,7 @@
     <div class="estimate-body">
       <!-- <app-progress-bar [progressValue]="count"></app-progress-bar> -->
       <h1  class="question-head">{{currentQuestion.question}}</h1>
-      <p  class="user-help">For example: {{currentQuestion.help}}</p>
+      <p  class="user-help">For example, {{currentQuestion.help}}</p>
       <ul class="options">
         <li *ngFor="let option of currentQuestion.options" (click)="nextQuestion(option.value)" class="btn-action-white">{{option.optionText}}</li>
       </ul>

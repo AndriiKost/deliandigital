@@ -63,7 +63,7 @@ export const estimateAPI = [
   {
     id: 4,
     question: 'Will you need to accept payments?',
-    help: 'Paypal payments, charge directly from credit card',
+    help: 'Paypal payments, charge directly from a credit card',
     options: [
       {
         optionText: 'Yes',
@@ -100,7 +100,7 @@ export const estimateAPI = [
   },
   {
     id: 6,
-    question: 'Does your project would need to relay or connect with another application or website?',
+    question: 'Would your project need to relay or connect with another application or website?',
     help: 'Share data with a mobile application.',
     options: [
       {
@@ -119,12 +119,12 @@ export const estimateAPI = [
   },
   {
     id: 7,
-    question: 'Would you like to have a search functionality in your project?',
+    question: 'Would you like to have search functionality in your project?',
     help: 'The cost to build a search function can vary greatly. The price given here is an average for search integration based on basic tagging. Not Google.',
     options: [
       {
         optionText: 'Yes',
-        value: 2000
+        value: 1000
       },
       {
         optionText: 'No',
@@ -138,7 +138,7 @@ export const estimateAPI = [
   },
   {
     id: 8,
-    question: 'Would you like to use one of the Content Management System?',
+    question: 'Would you like to use a Content Management System?',
     help: 'A CMS will let you update content on your site without writing code (i.e. a blog).',
     options: [
       {
@@ -157,12 +157,12 @@ export const estimateAPI = [
   },
   {
     id: 9,
-    question: 'Would you like to have an admin dashboard, or statistics tracking main page?',
-    help: 'This means that you as an admin would be able to visit admin dashboard (backend of the project) or similar main page and you will be able to do certain things, that regular user couldn\'t. Like check how many people visited your website from facebook, or how many people pressed certain button.',
+    question: 'Would you like to have an admin dashboard, or statistics tracking the main page?',
+    help: 'This means that you as an admin would be able to visit admin dashboard (backend of the project) or similar main page and you will be able to do certain things, that regular user couldn\'t. Like, check how many people visited your website from Facebook, or how many people pressed a certain button.',
     options: [
       {
         optionText: 'Yes',
-        value: 2500
+        value: 1500
       },
       {
         optionText: 'No',
@@ -176,12 +176,12 @@ export const estimateAPI = [
   },
   {
     id: 10,
-    question: 'Would you like to be able to create accounts for your employees and assign different roles.',
-    help: 'Roles example could be: intern role - can only edit blog posts, while senior emplyee - can edit the whole website.',
+    question: 'Would you like to be able to create accounts for your employees and assign different roles?',
+    help: 'Roles example could be: intern role - can only edit blog posts, while senior employees - can edit the whole website.',
     options: [
       {
         optionText: 'Yes',
-        value: 2500
+        value: 1500
       },
       {
         optionText: 'No',

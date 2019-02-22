@@ -1,7 +1,7 @@
 {
-  "name": "mean-auth-app",
-  "version": "1.0.0",
-  "description": "MEAN stack auth app",
+  "name": "deliandigital",
+  "version": "2.0.0",
+  "description": "Delian Digital is a creative agency and software company.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
