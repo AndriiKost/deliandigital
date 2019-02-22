@@ -1,0 +1,45 @@
+.btn-action {
+  color: #000;
+  border: 2px solid #000;
+  background: rgb(240, 212, 60);
+  padding: .6em;
+  box-shadow: -4px 4px 0 0 #000;
+  font-weight: bold;
+  letter-spacing: .05em;
+}
+.btn-action:hover{
+  cursor: pointer;
+}
+.btn-action:focus {
+  outline: none;
+}
+.btn-action-white {
+  color: #000;
+  border: 2px solid #000;
+  background: #fff;
+  padding: .6em;
+  box-shadow: -4px 4px 0 0 #000;
+  font-weight: bold;
+  letter-spacing: .05em;
+  margin-left: 2em;
+}
+.btn-action-white:hover{
+  cursor: pointer;
+}
+.btn-action-white:focus {
+  outline: none;
+}
+.estimate-finished-actions {
+  margin: 2em 0;
+}
+.highlighted {
+  font-style: italic;
+}
+.estimate-completed-head h2, h4{
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+.estimate-result {
+  text-decoration: underline;
+  font-weight: bold;
+}

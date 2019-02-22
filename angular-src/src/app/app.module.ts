@@ -26,6 +26,9 @@ import { BlogComponent } from './components/blog/blog.component';
 import { CaseStudyComponent } from './components/case-study/case-study.component';
 import { EstimateComponent } from './components/estimate/estimate.component';
 import { MobileNavigationComponent } from './components/mobile-navigation/mobile-navigation.component';
+import { EstimateCompleteComponent } from './components/estimate/estimate-complete/estimate-complete.component';
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
+import { JourneyComponent } from './components/journey/journey.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -44,6 +47,7 @@ const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'register', redirectTo: 'login' },
+  { path: 'journey', component: JourneyComponent },
   { path: '**', redirectTo: '' }
 ];
 
@@ -68,7 +72,10 @@ const appRoutes: Routes = [
     BlogComponent,
     CaseStudyComponent,
     EstimateComponent,
-    MobileNavigationComponent
+    MobileNavigationComponent,
+    EstimateCompleteComponent,
+    ProgressBarComponent,
+    JourneyComponent
   ],
   imports: [
     BrowserModule,

@@ -1,14 +1,11 @@
-* {
-  background: transparent;
-}
 .estimate-fade {
   position: relative;
-  margin: 10% 0 10% 25%;
+  margin: 8em 2em 2em 2em;
   background-color: white;
 }
 .close-modal {
-  position: absolute;
-  top: 0;
+  max-width: 4em;
+  float: right;
   right: 25px;
   font-weight: bolder;
 }
@@ -18,6 +15,67 @@
 .close-modal:focus {
   outline: none;
 }
-.post-content {
-  margin: 100px;
+.estimate-body {
+  padding: 1em 3em 2em;
+}
+.question-head {
+  width: 80%;
+  margin: 2em auto 0;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: center;
+}
+.options {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+  margin: 3em 0 0 0;
+  padding:0;
+}
+.options li {
+  padding: .8em;
+  border: 1px solid #000;
+  font-weight: 400;
+  letter-spacing: .15em;
+}
+.options li:hover {
+  cursor: pointer;
+  background: rgb(239, 210, 76);
+}
+.user-help {
+  margin-top: .6em;
+  text-align: center;
+  color: rgb(138, 138, 138);
+  font-style: italic;
+}
+.btn-action-white {
+  color: #000;
+  border: 2px solid #000;
+  background: #fff;
+  padding: .6em;
+  box-shadow: -4px 4px 0 0 #000;
+  font-weight: bold;
+  letter-spacing: .05em;
+}
+.btn-action-white:hover{
+  cursor: pointer;
+}
+.btn-action-white:focus {
+  outline: none;
+}
+
+@media (max-width: 800px) {
+  .options {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .estimate-body {
+    padding: 1em 0 3em 0;
+  }
+  .question-head {
+    max-width: 90%;
+  }
 }

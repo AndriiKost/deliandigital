@@ -25,7 +25,10 @@ export class WindowScrollingService {
       style.setAttribute( 'data-debug', 'Injected by WindowScrolling service.' );
       style.textContent = `
           body {
-              overflow: hidden !important ;
+              width: 100%!important;
+              position: fixed!important;
+              overflow: hidden!important;
+              height: 100%!important;
           }
       `;
 
