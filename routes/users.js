@@ -7,14 +7,26 @@ const User = require('../models/user');
 
 // Post estimate
 router.get('/estimate', (req, res) => {
-  res.json({message: 'Success!'});
   let newUser = new User({
     name: req.body.name,
     email: req.body.email,
     projectCost: req.body.totalCost,
     projectDuration: req.body.totalDuration
   })
-})
+  // let newUser = new User({
+  //   name: 'req.body.name',
+  //   email: 'req.body.email',
+  //   projectCost: 'req.body.totalCost',
+  //   projectDuration: 'req.body.totalDuration'
+  // })
+  newUser.save(function (err) {
+    if (err) {
+        return next(err);
+    }
+    res.send('Geo Objects created successfully')
+  })
+  console.log(newUser);
+});
 
 // // Register
 // router.post('/register', (req, res, next) => {

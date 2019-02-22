@@ -24,7 +24,7 @@ const UserSchema = mongoose.Schema({
 const User = module.exports = mongoose.model('User', UserSchema);
 
 // // Add User Estimate
-// module.exports.addUser = function(newUser, callback) {
+// module.exports.addUser = (newUser, callback) => {
 //     newUser.save(callback);
 // }
 
