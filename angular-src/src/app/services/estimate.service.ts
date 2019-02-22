@@ -29,8 +29,8 @@ export class EstimateService {
   }
 
   submitUser(user) {
-    // const url = 'localhost:8080/users/estimate/';
-    const url = `https://deliandigital.herokuapp.com/users/estimate/${user.name}/${user.email}/${user.projectDuration}/${user.projectCost}`;
+    let url = `https://deliandigital.herokuapp.com/users/estimate/${user.name}/${user.email}/${user.projectDuration}/${user.projectCost}`;
+    console.log(url);
     return this.http.get(url, user);
   }
 }
