@@ -20,6 +20,7 @@ router.get('/estimate/:name/:email/:projectDuration/:projectCost', (req, res, ne
     if (err) {
         return next(err);
     }
+    res.status(200);
     res.send('Geo Objects created successfully')
   })
 });
