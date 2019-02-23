@@ -8,6 +8,11 @@ const User = require('../models/user');
 // Post estimate
 router.get('/estimate/:name/:email/:projectDuration/:projectCost', (req, res, next) => {
   // console.log(`############### REQ BODY USER => ${req.body.name}`);
+  if (!req.params) {
+    res.status(400)
+    res.send('Something went wrong. Server didn\'t receive estimate details. ')
+    return
+  }
   let newUser = new User({
     name: req.params.name,
     email: req.params.email,
@@ -15,15 +20,15 @@ router.get('/estimate/:name/:email/:projectDuration/:projectCost', (req, res, ne
     projectDuration: req.params.projectDuration
   })
 
-  console.log(`################# NEW USER => ${newUser}`);
-  newUser.save(function (err) {
+  console.log(`##########@@@@@@@@@@########## NEW ESTIMATE => ${newUser}`)
+  newUser.save((err) => {
     if (err) {
         return next(err);
     }
-    res.status(200);
-    res.send('Geo Objects created successfully')
+    res.status(200)
+    res.send('Estimate was created successfully!')
   })
-});
+})
 
 // // Register
 // router.post('/register', (req, res, next) => {
