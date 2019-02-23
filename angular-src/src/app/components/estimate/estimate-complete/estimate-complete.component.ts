@@ -52,7 +52,7 @@ export class EstimateCompleteComponent implements OnInit {
     selBox.style.left = '0';
     selBox.style.top = '0';
     selBox.style.opacity = '0';
-    selBox.value = `Delian Digital will build your project for approximately ${this.projectDuration}, and a cost of $${this.totalValue} - $${this.totalUpperValue}. Contact information a.kost@deliandigital.com or (314)885-4259.`;
+    selBox.value = `Delian Digital will build your project for approximately ${this.projectDuration}, and a cost of $${this.totalValue} - $${this.totalUpperValue}. Contact information hello@deliandigital.com or (920)561-1064.`;
     document.body.appendChild(selBox);
     selBox.focus();
     selBox.select();
