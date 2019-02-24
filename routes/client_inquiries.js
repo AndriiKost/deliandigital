@@ -3,39 +3,47 @@ const router = express.Router();
 
 const Estimate = require('../models/estimate');
 
+// Helper function 
+const asyncMiddleware = fn =>
+  (req, res, next) => {
+    Promise.resolve(fn(req, res, next))
+      .catch(next);
+};
+
 // Test 
 router.get('/test', (req, res, next) => {
-  if (err) {
-    return next(err);
+  try {
+    res.status(200)
+    res.json({"status": "success"})
+  } catch(e) {
+    next(e)
   }
-  res.status(200)
-  res.send('Hello from test API')
 })
 
 // Post estimate
-router.get('/estimate/:name/:email/:projectDuration/:projectCost', (req, res, next) => {
+router.get('/estimate/:name/:email/:projectDuration/:projectCost', asyncMiddleware(async (req, res, next) => {
+  try {
+    let newEstimate = await new Estimate({
+      name: req.params.name,
+      email: req.params.email,
+      projectCost: req.params.projectCost,
+      projectDuration: req.params.projectDuration
+    })
 
-  if (!req.params) {
-    res.status(400)
-    res.send('Something went wrong. Server didn\'t receive estimate details. ')
-    return
+    console.log(`##########@@@@@@@@@@########## NEW ESTIMATE => ${newEstimate}`)
+
+    await newEstimate.save((err) => {
+      if (err) {
+          return next(err);
+      }
+      res.status(200)
+      res.json({"status": "success", "estimate": newEstimate})
+    })
+  } catch(e) {
+    next(e) 
   }
-  let newEstimate = new Estimate({
-    name: req.params.name,
-    email: req.params.email,
-    projectCost: req.params.projectCost,
-    projectDuration: req.params.projectDuration
-  })
 
-  console.log(`##########@@@@@@@@@@########## NEW ESTIMATE => ${newEstimate}`)
-  newEstimate.save((err) => {
-    if (err) {
-        return next(err);
-    }
-    res.status(200)
-    res.send('Estimate was created successfully!')
-  })
-})
+}))
 
 // Handle Contact Form
 router.post('/contact', (req, res, next) => {

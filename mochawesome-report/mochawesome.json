@@ -1,0 +1,135 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-02-24T20:03:13.397Z",
+    "end": "2019-02-24T20:03:14.197Z",
+    "duration": 800,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "257f9abe-7dcb-4e39-9dee-15ea2d2e570f",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "2bbdf317-8c04-4834-a5f4-28b86757de8f",
+        "title": "GET /api/test",
+        "fullFile": "/Users/andriikost/Desktop/Angular/deliandigital/tests/client_inquiries.test.js",
+        "file": "/tests/client_inquiries.test.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "should respond with 200 and status success",
+            "fullTitle": "GET /api/test should respond with 200 and status success",
+            "timedOut": false,
+            "duration": 30,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "chai.request(server)\n.get('/api/test')\n.end((err, res) => {\n// there should be no errors\nshould.not.exist(err);\n// there should be a 200 status code\nres.status.should.equal(200);\n// the response should be JSON\nres.type.should.equal('application/json');\n// the JSON response body should have a\n// key-value pair of {\"status\": \"success\"}\nres.body.status.should.eql('success');\n// the JSON response body should have a\n// key-value pair of {\"data\": [2 user objects]}\n// res.body.data.length.should.eql(2);\n// the first object in the data array should\n// have the right keys\n// res.body.data[0].should.include.keys(\n// 'id', 'username', 'email', 'created_at'\n// );\ndone();\n    });",
+            "err": {},
+            "isRoot": false,
+            "uuid": "baba23a1-9e5e-4b76-bb1a-bf3f4c793fc5",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "baba23a1-9e5e-4b76-bb1a-bf3f4c793fc5"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 30,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 10000
+      },
+      {
+        "uuid": "321f0fc8-d485-4d2d-9884-0acc47cd88b9",
+        "title": "GET /api/estimate",
+        "fullFile": "/Users/andriikost/Desktop/Angular/deliandigital/tests/client_inquiries.test.js",
+        "file": "/tests/client_inquiries.test.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "should respond with user's estimate and 200 code",
+            "fullTitle": "GET /api/estimate should respond with user's estimate and 200 code",
+            "timedOut": false,
+            "duration": 680,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "chai.request(server)\n.get(`/api/estimate/${randomString()}/${randomString()}/${randomString()}/${randomString()}`)\n.end((err, res) => {\n    should.not.exist(err);\n    res.status.should.equal(200);\n    res.type.should.equal('application/json');\n    res.body.status.should.eql('success');\n    // res.body.data.length.should.eql(2);\n    // console.log(res.body.estimate)\n    res.body.estimate.should.include.keys(\n    '_id', 'name', 'email', 'projectCost', 'projectDuration'\n    );\n    done();\n})",
+            "err": {},
+            "isRoot": false,
+            "uuid": "55eec976-4543-4fe0-8d94-02407b321c73",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "should save document in mongoDB document",
+            "fullTitle": "GET /api/estimate should save document in mongoDB document",
+            "timedOut": false,
+            "duration": 69,
+            "state": "passed",
+            "speed": "medium",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "const name = randomString()\nconst email = randomString()\nconst projectCost = randomString()\nconst projectDuration = randomString()\nchai.request(server)\n.get(`/api/estimate/${name}/${email}/${projectDuration}/${projectCost}`)\n.end((err, res) => {\n    should.not.exist(err);\n    res.status.should.equal(200);\n    res.type.should.equal('application/json');\n    res.body.status.should.eql('success');\n    const id = res.body.estimate._id;\n    Estimate.findById(id, (err, data) => {\n        should.not.exist(err);\n        if (data.name !== name) { throw new Error('No name found in posted collection!') }\n        if (data.email !== email) { throw new Error('No email found in posted collection!') }\n        if (data.projectCost !== projectCost) { throw new Error('No projectCost found in posted collection!') }\n        if (data.projectDuration !== projectDuration) { throw new Error('No projectDuration found in posted collection!') }\n    })\n    done();\n})",
+            "err": {},
+            "isRoot": false,
+            "uuid": "47f99713-af28-4efb-a64a-d987865800de",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "55eec976-4543-4fe0-8d94-02407b321c73",
+          "47f99713-af28-4efb-a64a-d987865800de"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 749,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 10000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 10000
+  },
+  "copyrightYear": 2019
+}

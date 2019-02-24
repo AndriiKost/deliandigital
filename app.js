@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const helmet = require('helmet');
 // const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
@@ -17,6 +18,8 @@ mongoose.connection.on('error', (err) => {
 });
 
 const app = express();
+
+app.use(helmet());
 
 const client_inquiries = require('./routes/client_inquiries');
 
@@ -54,3 +57,5 @@ app.get('*', (req, res) => {
 app.listen(port, () => {
     console.log('server started on port '+port);
 });
+
+module.exports = app
