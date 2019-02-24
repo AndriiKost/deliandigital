@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const passport = require('passport');
+// const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
 
@@ -18,7 +18,7 @@ mongoose.connection.on('error', (err) => {
 
 const app = express();
 
-const users = require('./routes/users');
+const client_inquiries = require('./routes/client_inquiries');
 
 // Port for heroku
 const port = process.env.PORT || 8080;
@@ -38,7 +38,7 @@ app.use(bodyParser.json());
 
 // require('./config/passport')(passport);
 
-app.use('/users', users);
+app.use('/api', client_inquiries);
 
 // Index Route
 app.get('/', (req, res) => {

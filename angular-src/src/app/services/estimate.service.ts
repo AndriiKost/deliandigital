@@ -29,8 +29,12 @@ export class EstimateService {
   }
 
   submitUser(user) {
-    const url = `https://deliandigital.herokuapp.com/users/estimate/${user.name}/${user.email}/${user.projectDuration}/${user.projectCost}`;
-    console.log(url);
+    // Prod
+    const url = `https://www.deliandigital.com/api/estimate/${user.name}/${user.email}/${user.projectDuration}/${user.projectCost}`;
+    // Dev
+    // const url = `localhost:8080/api/estimate/${user.name}/${user.email}/${user.projectDuration}/${user.projectCost}`;
+    // console.log(`USING DEVELOPMENT url => ${url}`);
+
     return this.http.get(url);
   }
 }

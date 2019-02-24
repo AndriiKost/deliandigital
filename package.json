@@ -4,8 +4,9 @@
   "description": "Delian Digital is a creative agency and software company.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app"
+    "test": "mocha",
+    "start": "node app",
+    "dev:start": "nodemon app.js"
   },
   "author": "Andrii Kost",
   "dependencies": {
@@ -15,8 +16,12 @@
     "express": "*",
     "jsonwebtoken": "*",
     "mongoose": "*",
+    "nodemon": "^1.18.10",
     "passport": "*",
     "passport-jwt": "*"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^6.0.1"
+  }
 }
