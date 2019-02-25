@@ -14,7 +14,31 @@ const asyncMiddleware = fn =>
 router.get('/test', (req, res, next) => {
   try {
     res.status(200)
-    res.json({"status": "success"})
+    return res.json({"status": "success"})
+  } catch(e) {
+    next(e)
+  }
+})
+
+// New post estimate
+router.post('/new-estimate', (req, res, next) => {
+  try {
+    const newEstimate = new Estimate({
+      name: req.body.name,
+      email: req.body.email,
+      projectCost: req.body.projectCost,
+      projectDuration: req.body.projectDuration
+    })
+
+    newEstimate.save((err) => {
+      if (err) {
+        console.log(err)
+        return next(err)
+      }
+      console.log(`NEW ESTIMATE HERE => ${newEstimate}`)
+      res.status(200)
+      return res.send(newEstimate)
+    })  
   } catch(e) {
     next(e)
   }
@@ -37,7 +61,7 @@ router.get('/estimate/:name/:email/:projectDuration/:projectCost', asyncMiddlewa
           return next(err);
       }
       res.status(200)
-      res.json({"status": "success", "estimate": newEstimate})
+      return res.json({"status": "success", "estimate": newEstimate})
     })
   } catch(e) {
     next(e) 

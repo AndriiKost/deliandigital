@@ -54,7 +54,7 @@ export class SuccessModalComponent implements OnInit {
     if (this.name === '' || this.name === undefined) {
       this._flashMessagesService.show(`Thank You! We will be in touch with you shortly.`, { cssClass: 'alert-success', timeout: 4000 });
     } else {
-      this._flashMessagesService.show(`Thank You, ${name}! We will get in touch with you shortly.`, { cssClass: 'alert-success', timeout: 4000 });
+      this._flashMessagesService.show(`Thank You, ${this.name}! We will get in touch with you shortly.`, { cssClass: 'alert-success', timeout: 4000 });
     }
   }
 

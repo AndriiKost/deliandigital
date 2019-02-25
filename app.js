@@ -7,6 +7,8 @@ const helmet = require('helmet');
 const mongoose = require('mongoose');
 const config = require('./config/database');
 
+const app = express();
+
 mongoose.connect(config.database);
 
 // Connect to DB and handle errors
@@ -17,11 +19,11 @@ mongoose.connection.on('error', (err) => {
     console.log('database error '+err);
 });
 
-const app = express();
-
 app.use(helmet());
 
-const client_inquiries = require('./routes/client_inquiries');
+// Body Parser Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // Port for heroku
 const port = process.env.PORT || 8080;
@@ -32,15 +34,13 @@ app.use(cors());
 // Set Startic Folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Body Parser Middleware
-app.use(bodyParser.json());
-
 // // Pasport's Middleware
 // app.use(passport.initialize());
 // app.use(passport.session());
 
 // require('./config/passport')(passport);
 
+const client_inquiries = require('./routes/client_inquiries');
 app.use('/api', client_inquiries);
 
 // Index Route

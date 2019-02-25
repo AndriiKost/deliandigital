@@ -83,6 +83,60 @@ describe('GET /api/estimate', () => {
     })
 })
 
+describe('POST /api/new-estimate', () => {
+    
+    it('should respond with user\'s estimate and 200 code', (done) => {
+        chai.request(server)
+        .post(`/api/new-estimate`)
+        .send({
+            "name": randomString(),
+            "email": randomString(),
+            "projectCost": randomString(),
+            "projectDuration": randomString()
+        })
+        .end((err, res) => {
+            should.not.exist(err);
+            res.status.should.equal(200);
+            res.type.should.equal('application/json');
+            res.body.should.include.keys(
+            '_id', 'name', 'email', 'projectCost', 'projectDuration'
+            );
+            done();
+        })
+    })
+
+    it('should save document in mongoDB document', (done) => {
+        const name = randomString()
+        const email = randomString()
+        const projectCost = randomString()
+        const projectDuration = randomString()
+
+        chai.request(server)
+        .post(`/api/new-estimate`)
+        .send({
+            "name": name,
+            "email": email,
+            "projectCost": projectCost,
+            "projectDuration": projectDuration
+        })
+        .end((err, res) => {
+            should.not.exist(err);
+            res.status.should.equal(200);
+            const id = res.body._id;
+
+            Estimate.findById(id, (err, data) => {
+                should.not.exist(err);
+                // console.log(`DATA IS HERER => ${data}`)
+                if (data.name !== name) { throw new Error('No name found in posted collection!') }
+                if (data.email !== email) { throw new Error('No email found in posted collection!') }
+                if (data.projectCost !== projectCost) { throw new Error('No projectCost found in posted collection!') }
+                if (data.projectDuration !== projectDuration) { throw new Error('No projectDuration found in posted collection!') }
+            })
+            done();
+        })
+    })
+})
+
     // Util
     // generate random string
     function randomString() {

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { estimateAPI } from '../api/estimateAPI';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
 @Injectable({
@@ -30,11 +30,13 @@ export class EstimateService {
 
   submitUser(user) {
     // Prod
-    const url = `https://www.deliandigital.com/api/estimate/${user.name}/${user.email}/${user.projectDuration}/${user.projectCost}`;
+    // const url = `https://www.deliandigital.com/api/estimate/${user.name}/${user.email}/${user.projectDuration}/${user.projectCost}`;
     // Dev
-    // const url = `localhost:8080/api/estimate/${user.name}/${user.email}/${user.projectDuration}/${user.projectCost}`;
-    // console.log(`USING DEVELOPMENT url => ${url}`);
+    // const url = `localhost:8080/api/new-estimate`;
+    const url = `https://www.deliandigital.com/api/new-estimate`;
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    return this.http.get(url);
+    // return this.http.get(url);
+    return this.http.post(url, user, { headers: headers });
   }
 }
